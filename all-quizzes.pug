@@ -1,0 +1,12 @@
+
+extends layout
+
+block content
+  h1 All Quizzes
+  if quizzes.length > 0
+    ul
+      each quiz in quizzes
+        li
+          a(href=`/quiz/${quiz.id}`) #{quiz.name}
+  else
+    p No quizzes available.

@@ -1,0 +1,20 @@
+
+extends layout
+
+block content
+  h1= quiz.name
+  p Description: #{quiz.description}
+
+  h2 Questions:
+  if questions && questions.length > 0
+    ul
+      each question in questions
+        li
+          p Question: #{question.text}  // Display the question text
+          ul
+            li Option A: #{question.option_a}
+            li Option B: #{question.option_b}
+            li Option C: #{question.option_c}
+            li Option D: #{question.option_d}
+  else
+    p No questions available for this quiz.

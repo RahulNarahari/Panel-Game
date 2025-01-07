@@ -1,5 +1,18 @@
-html 
-    head    
-        title #{title}
-    body 
-        block content
+// layout.pug
+html
+  head
+    title Quiz Application
+    link(rel='stylesheet', href='/styles.css')
+  body
+    header
+      h1 Quiz Application
+      nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/all-quizzes') All Quizzes
+    main
+      block content
+    footer
+      p &copy; 2025 Quiz Application
